@@ -1,10 +1,16 @@
-import React from 'react'
+import React, { Children } from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
+import { MyContextProvider } from './context/component/MyContext.jsx'
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <MyContextProvider>
     <App />
-  </React.StrictMode>,
+
+    </MyContextProvider>
+
+  </React.StrictMode>
 )
